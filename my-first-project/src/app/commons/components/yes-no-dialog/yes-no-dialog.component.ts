@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-yes-no-dialog',
   imports: [],
   templateUrl: './yes-no-dialog.component.html',
-  styleUrl: './yes-no-dialog.component.css'
+  styleUrl: './yes-no-dialog.component.scss'
 })
 export class YesNoDialogComponent {
 
