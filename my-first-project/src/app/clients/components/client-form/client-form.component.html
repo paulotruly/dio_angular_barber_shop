@@ -1,35 +1,35 @@
-<form #form="ngForm" (ngSubmit)="obSubmit" class="container">
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" class="container">
 
     <div>
         <div class="col-12">
-            <met-form-field>
+            <mat-form-field>
                 <mat-label> Nome </mat-label> 
-                <input matInput name="name", id="name" #nameModel="ngModel" [(ngModel)]="client.name" required>
+                <input matInput name="name" id="name" #nameModel="ngModel" [(ngModel)]="client.name" required>
                 @if (nameModel.hasError('required')){
                     <mat-error>Informe o nome do cliente</mat-error>
                 }
-            </met-form-field>
+            </mat-form-field>
         </div>
 
         <div class="row">
             <div class="col-6">
-                <met-from-field class="fil-col">
+                <mat-form-field class="fil-col">
                     <mat-label>E-mail</mat-label>
                     <input matInput name="email" id="email" #emailModel="ngModel" [(ngModel)]="client.email" required email>
                     @if (nameModel.hasError('required') || nameModel.hasError('email')){
                         <mat-error>Informe um e-mail válido para o cliente</mat-error>
                     }
-                </met-from-field>
+                </mat-form-field>
             </div>
 
             <div class="col-6">
-                <met-from-field class="fil-col">
+                <mat-form-field class="fil-col">
                     <mat-label> Celular </mat-label>
-                    <input matInput name="phone" id="phone" #phoneModel="ngModel" [(ngModel)]="client.phone" required mask="{00} 0000-0000">
+                    <input matInput name="phone" id="phone" #phoneModel="ngModel" [(ngModel)]="client.phone" required mask="(00) 0000-0000">
                     @if (nameModel.hasError('required') || nameModel.hasError('mask')){
                         <mat-error>Informe o número do cliente</mat-error>
                     }
-                </met-from-field>
+                </mat-form-field>
             </div>
         </div>
 
@@ -42,4 +42,4 @@
 
     </div>
 
-</form>
+</form> 
